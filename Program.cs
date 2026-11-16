@@ -65,13 +65,43 @@
 // Console.WriteLine($"В 2030 году вам будет {2030 - birthYearConvert} лет");
 
 
+// Console.WriteLine();
+// Console.WriteLine("Введите количество прочитанных книг за семестр: ");
+// string booksInput = Console.ReadLine();
+
+// bool wasSuccessfull = int.TryParse(booksInput, out int booksCount);
+
+// Console.WriteLine($"Удалось преобразовать: {wasSuccessfull}");
+// Console.WriteLine($"Значение переменной BooksCount: {booksCount}");
+
+
 Console.WriteLine();
-Console.WriteLine("Введите количество прочитанных книг за семестр: ");
-string booksInput = Console.ReadLine();
+// 1. Имя и фамилия
+Console.Write("Введите имя и фамилию: ");
+string fullName = Console.ReadLine();
 
-bool wasSuccessfull = int.TryParse(booksInput, out int booksCount);
+// 2. Название группы
+Console.Write("Введите группу: ");
+string group = Console.ReadLine();
 
-Console.WriteLine($"Удалось преобразовать: {wasSuccessfull}");
-Console.WriteLine($"Значение переменной BooksCount: {booksCount}");
+// 3. Год рождения
+Console.Write("Введите год рождения: ");
+int birthYear = int.Parse(Console.ReadLine());
 
+// 4. Средний балл
+Console.Write("Введите средний балл: ");
+double averageScore = double.Parse(Console.ReadLine());
 
+// 5. Любимая буква (берем первый символ строки)
+Console.Write("Введите любимую букву: ");
+char favoriteLetter = Console.ReadLine()[0];
+
+Console.WriteLine();
+Console.WriteLine("====== Анкета ======");
+// Вывод данных с помощью интерполяции строк
+Console.WriteLine($"{fullName}, группа {group}");
+Console.WriteLine($"Год рождения: {birthYear} (в 2030 будет {2030 - birthYear} лет)");
+Console.WriteLine($"Средний балл: {averageScore}");
+bool isGoodStudent = averageScore >= 4.0; // Сравнение
+Console.WriteLine($"Балл >= 4.0: {isGoodStudent}");
+Console.WriteLine($"Любимая буква: {favoriteLetter}");
