@@ -105,3 +105,14 @@ Console.WriteLine($"Средний балл: {averageScore}");
 bool isGoodStudent = averageScore >= 4.0; // Сравнение
 Console.WriteLine($"Балл >= 4.0: {isGoodStudent}");
 Console.WriteLine($"Любимая буква: {favoriteLetter}");
+
+// --- Ввод фамилии и имени, вывод в формате "Фамилия И." ---
+Console.Write("Введите фамилию: ");
+string lastName = Console.ReadLine();
+
+Console.Write("Введите имя: ");
+string firstName = Console.ReadLine();
+
+char initial = firstName[0]; // первая буква имени
+
+Console.WriteLine($"{lastName} {initial}.");
