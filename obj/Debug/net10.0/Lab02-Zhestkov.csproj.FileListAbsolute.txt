@@ -12,3 +12,4 @@ C:\Users\Ваня\Documents\Lab02-Zhestkov\obj\Debug\net10.0\refint\Lab02-Zhestk
 C:\Users\Ваня\Documents\Lab02-Zhestkov\obj\Debug\net10.0\Lab02-Zhestkov.pdb
 C:\Users\Ваня\Documents\Lab02-Zhestkov\obj\Debug\net10.0\Lab02-Zhestkov.genruntimeconfig.cache
 C:\Users\Ваня\Documents\Lab02-Zhestkov\obj\Debug\net10.0\ref\Lab02-Zhestkov.dll
+C:\Users\Ваня\Documents\Lab02-Zhestkov\obj\Debug\net10.0\Lab02-Zhestkov.sourcelink.json
