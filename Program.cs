@@ -41,12 +41,37 @@
 // Console.WriteLine($"decimal: 0.1 + 0.2 = {priceDecimal}");
 
 
+// Console.WriteLine();
+// Console.WriteLine("var");
+
+// var studentAge = 20;
+// var gpa = 4.75;
+// var fullName = "Смирнова А.С.";
+
+// Console.WriteLine($"{fullName}, возраст {studentAge}, средний балл {gpa}"); 
+
+
+// Console.WriteLine();
+// Console.WriteLine("Ввод чисел: Convert и Parse");
+
+// Console.WriteLine("Введите ваш год рождения: ");
+// string birthYearInput = Console.ReadLine();
+
+// int birthYearConvert = Convert.ToInt32(birthYearInput);
+// int birthYaerParse = int.Parse(birthYearInput);
+
+// Console.WriteLine($"Convert.ToInt32: {birthYearConvert}");
+// Console.WriteLine($"int.Parse: {birthYaerParse}");
+// Console.WriteLine($"В 2030 году вам будет {2030 - birthYearConvert} лет");
+
+
 Console.WriteLine();
-Console.WriteLine("var");
+Console.WriteLine("Введите количество прочитанных книг за семестр: ");
+string booksInput = Console.ReadLine();
 
-var studentAge = 20;
-var gpa = 4.75;
-var fullName = "Смирнова А.С.";
+bool wasSuccessfull = int.TryParse(booksInput, out int booksCount);
 
-Console.WriteLine($"{fullName}, возраст {studentAge}, средний балл {gpa}");
-studentAge = "двадцать";
+Console.WriteLine($"Удалось преобразовать: {wasSuccessfull}");
+Console.WriteLine($"Значение переменной BooksCount: {booksCount}");
+
+
