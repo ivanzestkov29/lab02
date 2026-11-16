@@ -75,44 +75,62 @@
 // Console.WriteLine($"Значение переменной BooksCount: {booksCount}");
 
 
-Console.WriteLine();
-// 1. Имя и фамилия
-Console.Write("Введите имя и фамилию: ");
-string fullName = Console.ReadLine();
+// Console.WriteLine();
+// // 1. Имя и фамилия
+// Console.Write("Введите имя и фамилию: ");
+// string fullName = Console.ReadLine();
 
-// 2. Название группы
-Console.Write("Введите группу: ");
-string group = Console.ReadLine();
+// // 2. Название группы
+// Console.Write("Введите группу: ");
+// string group = Console.ReadLine();
 
-// 3. Год рождения
-Console.Write("Введите год рождения: ");
-int birthYear = int.Parse(Console.ReadLine());
+// // 3. Год рождения
+// Console.Write("Введите год рождения: ");
+// int birthYear = int.Parse(Console.ReadLine());
 
-// 4. Средний балл
-Console.Write("Введите средний балл: ");
-double averageScore = double.Parse(Console.ReadLine());
+// // 4. Средний балл
+// Console.Write("Введите средний балл: ");
+// double averageScore = double.Parse(Console.ReadLine());
 
-// 5. Любимая буква (берем первый символ строки)
-Console.Write("Введите любимую букву: ");
-char favoriteLetter = Console.ReadLine()[0];
+// // 5. Любимая буква (берем первый символ строки)
+// Console.Write("Введите любимую букву: ");
+// char favoriteLetter = Console.ReadLine()[0];
 
-Console.WriteLine();
-Console.WriteLine("====== Анкета ======");
-// Вывод данных с помощью интерполяции строк
-Console.WriteLine($"{fullName}, группа {group}");
-Console.WriteLine($"Год рождения: {birthYear} (в 2030 будет {2030 - birthYear} лет)");
-Console.WriteLine($"Средний балл: {averageScore}");
-bool isGoodStudent = averageScore >= 4.0; // Сравнение
-Console.WriteLine($"Балл >= 4.0: {isGoodStudent}");
-Console.WriteLine($"Любимая буква: {favoriteLetter}");
+// Console.WriteLine();
+// Console.WriteLine("====== Анкета ======");
+// // Вывод данных с помощью интерполяции строк
+// Console.WriteLine($"{fullName}, группа {group}");
+// Console.WriteLine($"Год рождения: {birthYear} (в 2030 будет {2030 - birthYear} лет)");
+// Console.WriteLine($"Средний балл: {averageScore}");
+// bool isGoodStudent = averageScore >= 4.0; // Сравнение
+// Console.WriteLine($"Балл >= 4.0: {isGoodStudent}");
+// Console.WriteLine($"Любимая буква: {favoriteLetter}");
 
-// --- Ввод фамилии и имени, вывод в формате "Фамилия И." ---
-Console.Write("Введите фамилию: ");
-string lastName = Console.ReadLine();
+// // --- Ввод фамилии и имени, вывод в формате "Фамилия И." ---
+// Console.Write("Введите фамилию: ");
+// string lastName = Console.ReadLine();
 
-Console.Write("Введите имя: ");
-string firstName = Console.ReadLine();
+// Console.Write("Введите имя: ");
+// string firstName = Console.ReadLine();
 
-char initial = firstName[0]; // первая буква имени
+// char initial = firstName[0]; // первая буква имени
 
-Console.WriteLine($"{lastName} {initial}.");
+// Console.WriteLine($"{lastName} {initial}.");
+
+
+
+
+Console.Write("Введите целое число: ");
+string intInput = Console.ReadLine();
+bool intSuccess = int.TryParse(intInput, out int intValue);
+Console.WriteLine($"int.TryParse: успех = {intSuccess}, значение = {intValue}");
+
+Console.Write("Введите дробное число: ");
+string doubleInput = Console.ReadLine();
+bool doubleSuccess = double.TryParse(doubleInput, out double doubleValue);
+Console.WriteLine($"double.TryParse: успех = {doubleSuccess}, значение = {doubleValue}");
+
+Console.Write("Введите дату (дд.мм.гггг): ");
+string dateInput = Console.ReadLine();
+bool dateSuccess = DateTime.TryParse(dateInput, out DateTime dateValue);
+Console.WriteLine($"DateTime.TryParse: успех = {dateSuccess}, значение = {dateValue}");
